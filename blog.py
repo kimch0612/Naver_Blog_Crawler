@@ -33,7 +33,13 @@ def crawling():
             try:
                 driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[4]/div[6]/div/div[1]/div/div/div/div[1]').click()
             except:
-                driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[4]/div[6]/div/div[1]/div/div[2]/div/div[1]').click()
+                try:
+                    driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[4]/div[6]/div/div[1]/div/div[2]/div/div[1]').click()
+                except:
+                    try:
+                        driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[4]/div[5]/div/div[1]/div/div/div/div[1]').click()
+                    except:
+                        driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[4]/div[6]/div/div[1]/div/div/div/div[1]').click()
             time.sleep(2)
             title = driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[4]/div[1]/div/div[1]/div/div/div[2]')
             post = driver.find_element_by_xpath('//*[@id="viewTypeSelector"]/div/div[2]')
@@ -49,7 +55,13 @@ def nextpost():
         try:
             driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[4]/div[6]/div/div[1]/div/div/div/div[2]').click()
         except:
-            driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[4]/div[6]/div/div[1]/div/div[2]/div/div[2]').click()
+            try:
+                driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[4]/div[6]/div/div[1]/div/div[2]/div/div[2]').click()
+            except:
+                try:
+                    driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[4]/div[5]/div/div[1]/div/div/div/div[2]').click()
+                except:
+                    driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[4]/div[6]/div/div[1]/div/div/div/div[2]').click()
 
 while True:
     if fin != 1:
