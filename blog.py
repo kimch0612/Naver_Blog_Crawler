@@ -14,13 +14,14 @@ i = 5
 ii = 0
 title_before = ""
 fin = 0
+name = driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[4]/div[1]/div/div[1]/div/div/div[2]').text
 
 def crawling():
-    global i, ii, title_before, fin
+    global i, ii, title_before, fin, name
     title = driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[4]/div[1]/div/div[1]/div/div/div[2]')
     post = driver.find_element_by_xpath('//*[@id="viewTypeSelector"]/div/div[2]')
     if title_before != title.text:
-        with open("blog.txt", "a", encoding="utf8") as f:
+        with open(name + ".txt", "a", encoding="utf8") as f:
             f.write("///" + title.text + "///" + "\n\n" + post.text + '\n\n\n')
         i -= 1
         title_before = title.text
@@ -36,7 +37,7 @@ def crawling():
             time.sleep(2)
             title = driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[4]/div[1]/div/div[1]/div/div/div[2]')
             post = driver.find_element_by_xpath('//*[@id="viewTypeSelector"]/div/div[2]')
-            with open("blog.txt", "a", encoding="utf8") as f:
+            with open(name + ".txt", "a", encoding="utf8") as f:
                 f.write("///" + title.text + "///" + "\n\n" + post.text + '\n\n\n')
             fin = 1
 
