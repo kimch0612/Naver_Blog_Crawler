@@ -64,12 +64,16 @@ def nextpost():
                     driver.find_element_by_xpath('/html/body/div[6]/div[1]/div[4]/div[6]/div/div[1]/div/div/div/div[2]').click()
 
 while True:
-    if fin != 1:
-        time.sleep(2)
-        crawling()
-        nextpost()
-    else:
-        driver.quit()
-        break
+    try:
+        if fin != 1:
+            time.sleep(2)
+            crawling()
+            nextpost()
+        else:
+            driver.quit()
+            break
+    except:
+        print("오류가 발생했습니다.")
+        continue
 
 print("완료")
