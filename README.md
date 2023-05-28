@@ -1,9 +1,13 @@
 # Naver_Blog_Crawler
 
-## 코딩한 환경
-##### Win11 22H2 22621.1413
-##### Python 3.7.0
-##### Selenium 3.10.0
+## 개발 환경
+| Type | Content |
+|:---|:---|
+| OS | Win11 22H2 22621.963 |
+| Architecture | amd64 |
+| IDE | VSCode 1.78.2 |
+| Language | Python 3.7.0 |
+| Module | Selenium 3.10.0 |
 
 
 ## 프로그램의 용도
